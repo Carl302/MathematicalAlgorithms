@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,17 @@ namespace MathematicalAlgorithms
         public TheSumOfTwoNumbers()
         {
             InitializeComponent();
+        }
+        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var nums = Array.ConvertAll(this.input_nums.Text.Split(','), s => Convert.ToInt32(s));
+            var resultNums=TwoSum(nums, Convert.ToInt32(this.tagget.Text));
+            if (resultNums.Length <= 0)
+                this.result.Text = "没有得到数组下标";
+            else
+                this.result.Text = resultNums[0].ToString() + resultNums[1].ToString();
         }
         public int[] TwoSum(int[] nums, int target)
         {

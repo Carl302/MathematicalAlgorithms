@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="TheSumOfTwoNumbers" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Row="0" Margin="5">
+            <Label>两数之和</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5" Width="100">输入数字用,隔开</TextBlock>
+                <TextBox Margin="5" Width="500" x:Name="input_nums"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5" Width="100">输入和</TextBlock>
+                <TextBox Margin="5" Width="500" x:Name="tagget"></TextBox>
+            </StackPanel>
+            <Button Click="Button_Click">确定查看结果</Button>
+        </StackPanel>
+        <TextBlock Grid.Row="1" x:Name="result">
+            
+        </TextBlock>
     </Grid>
 </Window>
