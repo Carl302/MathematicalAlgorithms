@@ -15,7 +15,7 @@
             <Button Click="TheSumOfTwoNumbersClick" Margin="5">两数之和</Button>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <TextBlock>答案：</TextBlock>
+            <TextBlock>点击按钮进入算法</TextBlock>
         </StackPanel>
     </Grid>
 </Window>

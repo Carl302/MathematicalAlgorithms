@@ -33,7 +33,7 @@ namespace MathematicalAlgorithms
             if (resultNums.Length <= 0)
                 this.result.Text = "没有得到数组下标";
             else
-                this.result.Text = resultNums[0].ToString() + resultNums[1].ToString();
+                this.result.Text = "下标：" + resultNums[0].ToString() + "和下标：" + resultNums[1].ToString();
         }
         public int[] TwoSum(int[] nums, int target)
         {
